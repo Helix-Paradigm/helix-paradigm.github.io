@@ -7,106 +7,118 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Header Section -->
   <header class="header">
-    <div class="container">
+    <div class="container header-container">
       <div class="logo">
         <img src="logo.png" alt="Helix Paradigm Logo" class="logo-img">
       </div>
       <nav>
         <ul class="nav-links">
+          <li><button class="btn-nav" onclick="scrollToSection('dashboard')">Dashboard</button></li>
           <li><button class="btn-nav" onclick="scrollToSection('about')">About Us</button></li>
-          <li><button class="btn-nav" onclick="scrollToSection('services')">Our Services</button></li>
-          <li><button class="btn-nav" onclick="scrollToSection('research')">Research</button></li>
+          <li><button class="btn-nav" onclick="scrollToSection('services')">Services</button></li>
           <li><button class="btn-nav" onclick="scrollToSection('contact')">Contact</button></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main>
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
-      <div class="hero-content container">
-        <h1>Advancing Genetics to Unlock Human Potential</h1>
-        <p>Welcome to Helix Paradigm Institute. Redefining the limits of genetic research with precision, innovation, and care.</p>
-        <button class="btn-primary" onclick="scrollToSection('about')">Discover More</button>
-      </div>
-    </section>
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="hero-content container">
+      <h1>Welcome to Helix Paradigm Institute</h1>
+      <p>Innovating genetic research for a healthier, better future.</p>
+      <button class="btn-primary" onclick="scrollToSection('dashboard')">Explore Dashboard</button>
+    </div>
+  </section>
 
-    <!-- About Section -->
-    <section id="about" class="section about">
-      <div class="container">
-        <h2>About Us</h2>
-        <p>Helix Paradigm Institute is a pioneer in advanced genetics, committed to uncovering anomalies within human DNA. Our multidisciplinary team combines cutting-edge technology with ethical research practices to drive breakthroughs that improve lives.</p>
-        <button class="btn-secondary" onclick="scrollToSection('services')">Our Services</button>
-      </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="section services">
-      <div class="container">
-        <h2>Our Services</h2>
-        <div class="service-cards">
-          <div class="card">
-            <h3>Genetic Testing</h3>
-            <p>Identify genetic anomalies and unlock hidden potential with state-of-the-art testing services.</p>
-          </div>
-          <div class="card">
-            <h3>Precision Medicine</h3>
-            <p>Custom treatments designed based on your unique genetic profile for optimal results.</p>
-          </div>
-          <div class="card">
-            <h3>Research Collaborations</h3>
-            <p>Partnering with global leaders in healthcare to advance genetic research.</p>
-          </div>
+  <!-- Dashboard Section -->
+  <section id="dashboard" class="dashboard">
+    <div class="container">
+      <h2 class="section-title">Dashboard</h2>
+      <div class="dashboard-grid">
+        <div class="card">
+          <h3>Genetic Testing</h3>
+          <p>Analyze your genetic code for rare anomalies and potential insights.</p>
+          <button class="btn-card">View Details</button>
         </div>
-        <button class="btn-secondary" onclick="scrollToSection('research')">Learn About Research</button>
+        <div class="card">
+          <h3>Research Papers</h3>
+          <p>Explore our latest publications and breakthrough studies.</p>
+          <button class="btn-card">Access Library</button>
+        </div>
+        <div class="card">
+          <h3>Schedule Appointment</h3>
+          <p>Meet with our specialists for consultations or collaborations.</p>
+          <button class="btn-card">Book Now</button>
+        </div>
+        <div class="card">
+          <h3>Patient Portal</h3>
+          <p>Securely access your genetic data and medical history.</p>
+          <button class="btn-card">Login</button>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Research Section -->
-    <section id="research" class="section research">
-      <div class="container">
-        <h2>Our Research</h2>
-        <p>Our work focuses on identifying and leveraging genetic anomalies to enhance resilience to disease, unlock human potential, and drive medical innovation. We specialize in:</p>
-        <ul class="research-list">
-          <li>Genomic Sequencing and Anomaly Mapping</li>
-          <li>Epigenetic Modulation and Behavioral Genetics</li>
-          <li>Gene-Driven Therapeutic Developments</li>
-        </ul>
+  <!-- About Section -->
+  <section id="about" class="section about">
+    <div class="container">
+      <h2>About Helix Paradigm Institute</h2>
+      <p>We are a global leader in genetic research, dedicated to unlocking the secrets of human DNA. Our work focuses on leveraging advanced technology to identify and utilize genetic anomalies for the betterment of human health.</p>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="section services">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="service-grid">
+        <div class="service-item">
+          <h3>Genome Mapping</h3>
+          <p>Comprehensive analysis of your genetic makeup for personalized insights.</p>
+        </div>
+        <div class="service-item">
+          <h3>Clinical Trials</h3>
+          <p>Participate in cutting-edge research and trials for genetic treatments.</p>
+        </div>
+        <div class="service-item">
+          <h3>Epigenetic Therapies</h3>
+          <p>Innovative treatments designed to modify gene expression for better health.</p>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section contact">
-      <div class="container">
-        <h2>Contact Us</h2>
-        <form action="submit_form.php" method="post" class="contact-form">
-          <div class="form-group">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-          <div class="form-group">
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-          </div>
-          <button type="submit" class="btn-primary">Send Message</button>
-        </form>
-      </div>
-    </section>
-  </main>
+  <!-- Contact Section -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>We would love to hear from you. Please fill out the form below to reach us.</p>
+      <form action="submit_form.php" method="post" class="contact-form">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn-primary">Send Message</button>
+      </form>
+    </div>
+  </section>
 
+  <!-- Footer Section -->
   <footer class="footer">
     <div class="container">
       <p>&copy; 2025 Helix Paradigm Institute. All Rights Reserved.</p>
-      <p>
-        <a href="#" class="footer-link">Privacy Policy</a> | 
-        <a href="#" class="footer-link">Terms of Service</a>
-      </p>
+      <p><a href="#" class="footer-link">Privacy Policy</a> | <a href="#" class="footer-link">Terms of Service</a></p>
     </div>
   </footer>
 
