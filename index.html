@@ -7,16 +7,16 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
+  <header class="header">
     <div class="container">
       <div class="logo">
-        <img src="logo.png" alt="Helix Paradigm Institute Logo" class="logo-img">
+        <img src="logo.png" alt="Helix Paradigm Logo" class="logo-img">
       </div>
       <nav>
         <ul class="nav-links">
           <li><button class="btn-nav" onclick="scrollToSection('about')">About Us</button></li>
-          <li><button class="btn-nav" onclick="scrollToSection('research')">Our Research</button></li>
-          <li><button class="btn-nav" onclick="scrollToSection('programs')">Programs</button></li>
+          <li><button class="btn-nav" onclick="scrollToSection('services')">Our Services</button></li>
+          <li><button class="btn-nav" onclick="scrollToSection('research')">Research</button></li>
           <li><button class="btn-nav" onclick="scrollToSection('contact')">Contact</button></li>
         </ul>
       </nav>
@@ -24,79 +24,89 @@
   </header>
 
   <main>
-    <section id="hero">
-      <div class="hero-text">
-        <h1>Unlocking the Secrets of Human Potential</h1>
-        <p>At Helix Paradigm Institute, we pioneer breakthroughs in genetics to uncover the extraordinary within the ordinary.</p>
-        <button class="btn-primary" onclick="scrollToSection('about')">Learn More</button>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="hero-content container">
+        <h1>Advancing Genetics to Unlock Human Potential</h1>
+        <p>Welcome to Helix Paradigm Institute. Redefining the limits of genetic research with precision, innovation, and care.</p>
+        <button class="btn-primary" onclick="scrollToSection('about')">Discover More</button>
       </div>
     </section>
 
-    <section id="about">
+    <!-- About Section -->
+    <section id="about" class="section about">
       <div class="container">
         <h2>About Us</h2>
-        <p>The Helix Paradigm Institute is a global leader in genetic research, dedicated to understanding and unlocking anomalies within human DNA. By combining advanced genomics with innovative bioengineering, we aim to redefine the boundaries of science and human potential.</p>
-        <button class="btn-secondary" onclick="scrollToSection('research')">Explore Our Research</button>
+        <p>Helix Paradigm Institute is a pioneer in advanced genetics, committed to uncovering anomalies within human DNA. Our multidisciplinary team combines cutting-edge technology with ethical research practices to drive breakthroughs that improve lives.</p>
+        <button class="btn-secondary" onclick="scrollToSection('services')">Our Services</button>
       </div>
     </section>
 
-    <section id="research">
+    <!-- Services Section -->
+    <section id="services" class="section services">
       <div class="container">
-        <h2>Our Research</h2>
-        <div class="research-areas">
-          <div class="research-item">
-            <h3>Genetic Anomaly Detection</h3>
-            <p>Using cutting-edge CRISPR and AI tools, we identify rare genetic markers and anomalies that hold the key to enhanced human capabilities.</p>
+        <h2>Our Services</h2>
+        <div class="service-cards">
+          <div class="card">
+            <h3>Genetic Testing</h3>
+            <p>Identify genetic anomalies and unlock hidden potential with state-of-the-art testing services.</p>
           </div>
-          <div class="research-item">
-            <h3>Epigenetic Modulation</h3>
-            <p>Exploring the regulation of gene expression to unlock hidden genetic traits without altering DNA sequences.</p>
+          <div class="card">
+            <h3>Precision Medicine</h3>
+            <p>Custom treatments designed based on your unique genetic profile for optimal results.</p>
           </div>
-          <div class="research-item">
-            <h3>Applications in Medicine</h3>
-            <p>Developing precision therapies to target genetic disorders and enhance resilience to disease.</p>
+          <div class="card">
+            <h3>Research Collaborations</h3>
+            <p>Partnering with global leaders in healthcare to advance genetic research.</p>
           </div>
         </div>
-        <button class="btn-secondary" onclick="scrollToSection('programs')">View Our Programs</button>
+        <button class="btn-secondary" onclick="scrollToSection('research')">Learn About Research</button>
       </div>
     </section>
 
-    <section id="programs">
+    <!-- Research Section -->
+    <section id="research" class="section research">
       <div class="container">
-        <h2>Our Programs</h2>
-        <ul>
-          <li><strong>Human Genome Project: Phase II</strong> - Mapping genetic anomalies and their potential applications.</li>
-          <li><strong>Advanced Genetics Fellowship</strong> - Training the next generation of geneticists in anomaly research.</li>
-          <li><strong>Collaborative Research Network</strong> - Partnering with global institutions to expand our reach and impact.</li>
+        <h2>Our Research</h2>
+        <p>Our work focuses on identifying and leveraging genetic anomalies to enhance resilience to disease, unlock human potential, and drive medical innovation. We specialize in:</p>
+        <ul class="research-list">
+          <li>Genomic Sequencing and Anomaly Mapping</li>
+          <li>Epigenetic Modulation and Behavioral Genetics</li>
+          <li>Gene-Driven Therapeutic Developments</li>
         </ul>
-        <button class="btn-secondary" onclick="scrollToSection('contact')">Contact Us</button>
       </div>
     </section>
 
-    <section id="contact">
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
       <div class="container">
         <h2>Contact Us</h2>
-        <p>Have questions or want to collaborate? Reach out to us through the form below.</p>
-        <form action="submit_form.php" method="post">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required>
-          
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
-          
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-          
-          <button type="submit" class="btn-primary">Submit</button>
+        <form action="submit_form.php" method="post" class="contact-form">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary">Send Message</button>
         </form>
       </div>
     </section>
   </main>
 
-  <footer>
+  <footer class="footer">
     <div class="container">
-      <p>&copy; 2025 Helix Paradigm Institute. All rights reserved.</p>
-      <p><a href="#" class="footer-link">Privacy Policy</a> | <a href="#" class="footer-link">Terms of Service</a></p>
+      <p>&copy; 2025 Helix Paradigm Institute. All Rights Reserved.</p>
+      <p>
+        <a href="#" class="footer-link">Privacy Policy</a> | 
+        <a href="#" class="footer-link">Terms of Service</a>
+      </p>
     </div>
   </footer>
 
